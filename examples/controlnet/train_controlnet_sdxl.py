@@ -638,6 +638,7 @@ def get_train_dataset(args, accelerator):
             )
 
     if args.caption_column is None:
+        # 需要使用Image打开图片
         caption_column = column_names[1]
         logger.info(f"caption column defaulting to {caption_column}")
     else:
